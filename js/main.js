@@ -8,6 +8,9 @@ let theThumbnails = document.querySelectorAll('#buttonHolder img'),
 function changeImageSet() {
     console.log('this is our test');
 
+    let puzzleContainer = document.querySelector('.puzzle-pieces');
+    pzlPieces.forEach(piece => puzzleContainer.appendChild(piece));
+
     gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
 }
 
