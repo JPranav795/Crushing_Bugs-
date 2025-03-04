@@ -25,6 +25,11 @@ function allowDragOver(event) {
 function allowDrop(event) {
     event.preventDefault();
 
+    if (this.children.length > 0) {
+        console.log("Drop zone already occupied!");
+        return; // Stop execution
+    }
+
     let droppedElId = event.dataTransfer.getData('draggedEl');
 
     let droppedEl = document.querySelector(`#${droppedElId}`);
